@@ -1,0 +1,36 @@
+﻿@model UserEditViewModel
+ 
+<div class="row">
+    <div class="col-8"><h3>User</h3> </div>
+</div>
+
+
+<form asp-action="User" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname">Surname</label>
+        <input asp-for="Surname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Mail">Mail</label>
+        <input asp-for="Mail" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IsAdmin">IsAdmin</label>
+        <input asp-for="IsAdmin" h class="form-control">
+    </div>
+    
+
+    <div class="form-group">
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" type="password" h class="form-control">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ 

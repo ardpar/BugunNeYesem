@@ -1,0 +1,83 @@
+﻿@model LocationEditViewModel
+ 
+<div class="row">
+    <div class="col-8"><h3>Location</h3> </div>
+</div>
+
+
+<form asp-action="location" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="HasEatKard">
+        <label class="custom-control-label" asp-for="HasEatKard">Has Eat Kard</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <h4>DayToGo</h4>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoMonday">
+        <label class="custom-control-label" asp-for="DayToGoMonday">Monday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoTuesday">
+        <label class="custom-control-label" asp-for="DayToGoTuesday"> Tuesday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoWednesday">
+        <label class="custom-control-label" asp-for="DayToGoWednesday">Wednesday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoThursday">
+        <label class="custom-control-label" asp-for="DayToGoThursday">DayToGoThursday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoFriday">
+        <label class="custom-control-label" asp-for="DayToGoFriday">DayToGoFriday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoSaturday">
+        <label class="custom-control-label" asp-for="DayToGoSaturday">DayToGoSaturday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="DayToGoSunday">
+        <label class="custom-control-label" asp-for="DayToGoSunday">DayToGoSunday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <h4>Certain Day ToGo</h4>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoMonday">
+        <label class="custom-control-label" asp-for="CertainDayToGoMonday">CertainDayToGoMonday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoTuesday">
+        <label class="custom-control-label" asp-for="CertainDayToGoTuesday">CertainDayToGoTuesday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoWednesday">
+        <label class="custom-control-label" asp-for="CertainDayToGoWednesday">CertainDayToGoWednesday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoThursday">
+        <label class="custom-control-label" asp-for="CertainDayToGoThursday">CertainDayToGoThursday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoFriday">
+        <label class="custom-control-label" asp-for="CertainDayToGoFriday">CertainDayToGoFriday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoSaturday">
+        <label class="custom-control-label" asp-for="CertainDayToGoSaturday">CertainDayToGoSaturday</label>
+    </div>
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" asp-for="CertainDayToGoSunday">
+        <label class="custom-control-label" asp-for="CertainDayToGoSunday">CertainDayToGoSunday</label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ 

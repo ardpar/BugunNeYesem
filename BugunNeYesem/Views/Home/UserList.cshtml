@@ -1,0 +1,42 @@
+﻿@model List<UserListItemViewModel>
+    <div class="container">
+        <div class="row">
+            <div class="col"><h3>User List</h3> </div>
+            <div class="col"><a asp-controller="home" asp-action="User" asp-route-id="0" class="btn btn-link"> Add User </a></div>
+        </div>
+    </div>
+    @if (Model != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">IsAdmin?</th>
+                    <th scope="col">Mail</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Process</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <th scope="row">@item.Name</th>
+                    <td>@(item.IsAdmin?"Yes":"No")</td>
+                    <td>@item.Mail</td>
+                    <td>@item.Name</td>
+                    <td>@item.Surname</td>
+                    <td> <a asp-controller="Home" asp-action="User" asp-route-id="@item.Id" class="btn btn-warning">E </a><a asp-controller="Home" asp-action="UserDelete" asp-route-id="@item.Id" class="btn btn-danger">X</a></td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-12 text-center"> Lütfen Kullanıcı giriniz.</div>
+        </div>
+    }

@@ -1,0 +1,29 @@
+﻿@model CalcData
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Merhabalar </h1>
+    @if (Model != null)
+    {
+        <h1>@Model.Date.ToShortDateString() </h1>
+        <h2>Bugünkü Önerimiz: </h2>
+        <h1 class=""> @Model.Name </h1>
+        <a asp-action="GetNewCalcLocation" class="btn btn-warning">Begenmedim. Yeni Bul :(</a>
+        if (!Model.YKE)
+        {
+            <a asp-action="SetEatCardStatus" class="btn btn-danger">Yemek Kartım Bitti :(</a>
+
+        }
+        else
+        {
+
+            <a asp-action="SetEatCardStatus" class="btn btn-success">Yemek Kartımda Para var :D</a>
+        }
+    }
+    else
+    {
+        <h2>Üzgünüz Bugün bir öneri sunamıyoruz. </h2>
+    }
+ </div>
